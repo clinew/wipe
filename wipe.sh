@@ -94,7 +94,7 @@ for (( i=0 ; i < ${ITERATION_COUNT} ; i++ )); do
 	echo "Beginning wiping iteration ${i} of ${ITERATION_COUNT}."
 	for DEVICE in $@; do
 		echo "Wiping ${DEVICE}."
-		#dd if=/dev/urandom of=${DEVICE} bs=${BLOCK_SIZE}
+		dd if=/dev/urandom of=${DEVICE} bs=${BLOCK_SIZE}
 	done
 done
 echo "Done wiping."
